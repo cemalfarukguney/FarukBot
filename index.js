@@ -13,9 +13,6 @@ var T = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 })
 
-
-
-
 client.on("ready", () => {
   console.log('Logged in as ' + client.user.tag + '!');
 })
@@ -60,6 +57,7 @@ client.on("message", msg => {
     }
   }
 })
+
 client.once('ready', () => {
   var stream = T.stream('statuses/filter', { follow: [process.env.TWITTER_USER_ID] })
   console.log("ready");
