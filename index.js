@@ -48,7 +48,7 @@ client.on("message", msg => {
     else{
       try {
         let channel = client.channels.fetch(process.env.DISCORD_CHANNEL_ID).then(channel => {
-          channel.send("böyle bir şampiyon yok orospu evladı");
+          channel.send("böyle bir şampiyon yok");
         })
       }
       catch (error){
